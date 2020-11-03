@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>FASE 2</title>    
+    <meta charset="UTF-8">
+  </head>  
+  <body>    
+  </body>  
+  <script>
+    
+    let name = ['J', 'o', 's', 'e', ' ', 'M', 'a', 'r', 'i', 'a']
+    
+    for (let i = 0; i < name.length; i++)
+    {
+      let vowels = ['A', 'E', 'I', 'O', 'U']
+
+      if (name[i].match(/[A-Z]/gi))
+      {
+	if (vowels.includes(name[i].toUpperCase()))
+	  console.log(name[i] + " VOCAL.")
+	else
+	  console.log(name[i] + " CONSONANT.")
+      }
+      else if (name[i].match(/[0-9]/gi))
+	console.log(name[i] + " Els noms de persones no contenen números.")
+    }
+
+  </script>
+</html>
+
+
+

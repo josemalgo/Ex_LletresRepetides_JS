@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>FASE 3</title>    
+    <meta charset="UTF-8">
+  </head>  
+  <body>    
+  </body>  
+  <script>
+
+    let name = ['J', 'o', 's', 'e', ' ', 'M', 'a', 'r', 'i', 'a']
+    let countLetters = new Map()    
+
+    for (let i = 0; i < name.length; i++)
+    {
+      let capitalLetter = name[i].toUpperCase()
+
+      if (name[i].match(/[A-Z]/gi))
+      {
+	if (!countLetters.has(capitalLetter))
+	{
+	  countLetters.set(capitalLetter, 1)	    
+	}
+	else
+	{
+	  countLetters.forEach((value, key) => {
+	    if(capitalLetter == key)
+	      countLetters.set(capitalLetter, ++value) 
+	  })	  
+	}
+      }
+    }
+    
+    countLetters.forEach((value, key) => {
+      console.log(key + " - " + value)
+    })
+      
+  </script>
+</html>
+
+
+
